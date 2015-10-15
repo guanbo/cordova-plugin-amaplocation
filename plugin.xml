@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+  xmlns:android="http://schemas.android.com/apk/res/android" 
+  id="cordova-plugin-amaplocation" 
+  version="0.0.1">
+  <name>amaplocation</name>
+  <js-module name="amaplocation" src="www/amaplocation.js">
+    <clobbers target="navigator.amaplocation"/>
+  </js-module>
+  <platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="amaplocation">
+        <param name="android-package" value="com.extensivepro.amaplocation.amaplocation"/>
+      </feature>
+    </config-file>
+    <config-file target="AndroidManifest.xml" parent="/manifest/application">
+      <meta-data
+                android:name="com.amap.api.v2.apikey"
+                android:value="${AMAP_API_KEY_VALUE}" />
+    </config-file>
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+      <uses-permission android:name="android.permission.INTERNET" />
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+      <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+      <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+      <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+      <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+      <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+      <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    </config-file>
+    <source-file src="src/android/amaplocation.java" target-dir="src/com/extensivepro/amaplocation/"/>
+    <source-file src="src/android/libs/amap_location_v1.4.1.jar" target-dir="libs" />
+  </platform>
+</plugin>
