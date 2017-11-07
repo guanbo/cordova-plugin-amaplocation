@@ -17,6 +17,12 @@
     "location",
     "android"
   ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">3.0.0"
+    }
+  ],
   "author": "guanbo",
   "license": "ISC",
   "bugs": {
