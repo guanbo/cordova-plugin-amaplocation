@@ -1,0 +1,26 @@
+{
+  "name": "cordova-plugin-amaplocation",
+  "version": "1.0.0",
+  "description": "amap location plugin for android",
+  "cordova": {
+    "id": "cordova-plugin-amaplocation",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guanbo/cordova-plugin-amaplocation.git"
+  },
+  "keywords": [
+    "amap",
+    "location",
+    "android"
+  ],
+  "author": "guanbo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guanbo/cordova-plugin-amaplocation/issues"
+  },
+  "homepage": "https://github.com/guanbo/cordova-plugin-amaplocation#readme"
+}
